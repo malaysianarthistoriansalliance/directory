@@ -58,11 +58,17 @@ body { background: var(--bg); color: var(--ink); font-family: var(--serif); font
 a { color: var(--ink); text-underline-offset: 2px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 
-.top { display: flex; justify-content: space-between; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .02em; }
+.top { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-family: var(--sans); font-size: 12px; font-weight: 600; letter-spacing: .02em; min-height: 34px; }
+.join { margin-left: auto; font-family: var(--sans); font-size: 14px; font-weight: 600; text-decoration: none; background: var(--ink); color: #fff; border-radius: 2px; padding: 9px 20px; white-space: nowrap; transition: background .15s; }
+.join:hover, .join:focus-visible { background: var(--blue); }
 .mast { display: flex; flex-direction: column; gap: 14px; }
 .wordmark { font-family: var(--display); font-weight: 800; font-size: clamp(40px, 18.2vw, 238px); line-height: .9; letter-spacing: -.025em; text-align: center; margin: 0; padding-block: 4px 12px; overflow: hidden; }
 .mast h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(19px, 3.2vw, 26px); text-align: center; margin: 0; text-wrap: balance; }
 .lede { max-width: 90ch; margin: 0 auto; text-align: justify; font-size: 16px; }
+.about { max-width: 88ch; margin: 14px auto 0; font-size: 16.5px; line-height: 1.45; }
+.about .label { display: block; text-align: center; margin-bottom: 10px; }
+.about p { margin: 0 0 10px; text-align: justify; }
+@media (max-width: 640px) { .about p { text-align: left; font-size: 18px; hyphens: none; } }
 .notice { font-family: var(--sans); font-size: 12.5px; text-align: center; }
 
 .folder { display: flex; flex-direction: column; }
@@ -161,10 +167,11 @@ a { color: var(--ink); text-underline-offset: 2px; }
 
 <div class="wrap">
   <header class="mast">
-    
+    <div class="top"><a class="join" href="https://docs.google.com/forms/d/e/1FAIpQLScI28ljaZlnpWp1EHHVVChJtUEk3Jy7T6ClDocbIDZAgoBT5w/viewform?usp=dialog" target="_blank" rel="noopener">Join MAHA</a></div>
     <div class="wordmark" aria-hidden="true">MAHA</div>
     <h1>Malaysian Art Historians Alliance (MAHA)</h1>
     
+    <div class="about"><p>The Malaysian Art Historians Alliance (MAHA) is a network for people who research, write, teach or think seriously about art history and are Malaysian or live in Malaysia. The field is small and scattered across universities, galleries, publications and independent practice, and MAHA aims to bring its people into contact.</p><p>Membership is open to art historians, researchers, critics, educators, curators and students. MAHA is member-led. Its priorities, such as reading groups, research support and events, are set by the people in it. MAHA was founded in October 2026.</p></div>
     
   </header>
 
@@ -1144,7 +1151,7 @@ var M = [
  }
 ];
 var SUGGEST = [["MARI-ISSM", "Simon"], ["RogueArt (Beverly Yong, Kuala Lumpur)", "Simon"], ["MDA", "Kalash"], ["Ilham", "Kalash"], ["Zhongshan", "Kalash"], ["GMBB", "Kalash"], ["Lepak Lectures", "Sarah"]];
-var PT = {"PART 1": "PAGE TEXT", "Tab title": "MAHA Member Directory", "Small heading above the title": "", "Big wordmark": "MAHA", "Main title": "Malaysian Art Historians Alliance (MAHA)", "Search label": "Search", "Search placeholder": "Name, topic, institution", "Role label": "Role", "Role, first option": "All roles", "Theme label": "Theme", "Theme, first option": "All themes", "Language label": "Language", "Language, first option": "All languages", "Based in label": "Based in", "Based in, first option": "Anywhere", "Result count": "Showing {shown} of {total}.", "Clear button": "Clear filters", "Message when nothing matches": "No members match these filters.", "Members tab label": "Members", "Tab 3 label": "Get involved", "Founder tag": "Co-founder", "Preferred name format": "(preferred name: NAME)", "Paragraph label, interests": "Interests.", "Paragraph label, current work": "Currently.", "Fact label, location": "Based", "Fact label, roles": "Roles", "Fact label, affiliation": "Affiliation", "Fact label, languages": "Works in", "Fact label, wants": "Wants", "Fact label, offers": "Offered", "Fact label, themes": "Themes", "Fact label, email": "Email", "Fact label, WhatsApp": "WhatsApp", "Fact label, links": "Link", "Copy button": "Copy", "Copy button after clicking": "Copied", "Section 1 heading": "What members want from MAHA", "Section 1 subheading": "", "Section 1 last row label": "Something else", "Section 2 heading": "Shared interests", "Section 2 subheading": "Themes grouped from members' own descriptions.", "Section 3 heading": "Offers to help run MAHA", "Section 3 subheading": "From the question about helping as the group grows; not firm commitments, just an overview so far.", "Section 4 heading": "Other groups to connect with", "Section 4 subheading": "Suggested by members.", "Section 4 row note": "suggested by NAME", "Footer": "Summaries are shortened from what each member wrote. Based on the 21 form responses received 3–9 October 2026. To correct or remove your entry, message Zhi Zhi."};
+var PT = {"PART 1": "PAGE TEXT", "Tab title": "MAHA Member Directory", "Small heading above the title": "", "Join button label": "Join MAHA", "Join form link": "https://docs.google.com/forms/d/e/1FAIpQLScI28ljaZlnpWp1EHHVVChJtUEk3Jy7T6ClDocbIDZAgoBT5w/viewform?usp=dialog", "Big wordmark": "MAHA", "Main title": "Malaysian Art Historians Alliance (MAHA)", "About heading": "", "About paragraph 1": "The Malaysian Art Historians Alliance (MAHA) is a network for people who research, write, teach or think seriously about art history and are Malaysian or live in Malaysia. The field is small and scattered across universities, galleries, publications and independent practice, and MAHA aims to bring its people into contact.", "About paragraph 2": "Membership is open to art historians, researchers, critics, educators, curators and students. MAHA is member-led. Its priorities, such as reading groups, research support and events, are set by the people in it. MAHA was founded in October 2026.", "Search label": "Search", "Search placeholder": "Name, topic, institution", "Role label": "Role", "Role, first option": "All roles", "Theme label": "Theme", "Theme, first option": "All themes", "Language label": "Language", "Language, first option": "All languages", "Based in label": "Based in", "Based in, first option": "Anywhere", "Result count": "Showing {shown} of {total}.", "Clear button": "Clear filters", "Message when nothing matches": "No members match these filters.", "Members tab label": "Members", "Tab 3 label": "Get involved", "Founder tag": "Co-founder", "Preferred name format": "(preferred name: NAME)", "Paragraph label, interests": "Interests.", "Paragraph label, current work": "Currently.", "Fact label, location": "Based", "Fact label, roles": "Roles", "Fact label, affiliation": "Affiliation", "Fact label, languages": "Works in", "Fact label, wants": "Wants", "Fact label, offers": "Offered", "Fact label, themes": "Themes", "Fact label, email": "Email", "Fact label, WhatsApp": "WhatsApp", "Fact label, links": "Link", "Copy button": "Copy", "Copy button after clicking": "Copied", "Section 1 heading": "What members want from MAHA", "Section 1 subheading": "", "Section 1 last row label": "Something else", "Section 2 heading": "Shared interests", "Section 2 subheading": "Themes grouped from members' own descriptions.", "Section 3 heading": "Offers to help run MAHA", "Section 3 subheading": "From the question about helping as the group grows; not firm commitments, just an overview so far.", "Section 4 heading": "Other groups to connect with", "Section 4 subheading": "Suggested by members.", "Section 4 row note": "suggested by NAME", "Footer": "Summaries are shortened from what each member wrote. Based on the 21 form responses received 3–9 October 2026. To correct or remove your entry, message Zhi Zhi."};
 
 var T = function (k, d) { return PT[k] !== undefined ? PT[k] : (d || ""); };
 var state = { q: "", role: "", lang: "", region: "", theme: "", help: false };
